@@ -28,7 +28,6 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.kernel_approximation import RBFSampler
-from sklearn.preprocessing import PolynomialFeatures
 
 # ------- Regression Models -------
 from sklearn.neighbors import KNeighborsRegressor

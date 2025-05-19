@@ -1,0 +1,10 @@
+# requirements.txt
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+cvxpy
+scs
+shap
+knockpy
