@@ -12,7 +12,7 @@ reg_map = {
     'gb_classifier':'gb_regressor'
 }
 
-df = pd.read_csv('/net/dali/home/mscbio/rul98/PheOpt/compare/whyshift/datasets/support2_processed.csv')
+df = pd.read_csv('../data/support2_processed.csv')
 source_df = df[df['hospdead']==0].drop(columns = ['hospdead'])
 target_df = df[df['hospdead']==1].drop(columns = ['hospdead'])
 

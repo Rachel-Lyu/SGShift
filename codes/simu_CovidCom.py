@@ -2,7 +2,7 @@ from SGShift import *
 import pandas as pd
 import numpy as np
 import os
-df = pd.read_csv('/net/dali/home/mscbio/rul98/PheOpt/compare/whyshift/datasets/new_CovidCom.csv', index_col= 0)
+df = pd.read_csv('../data/CovidCom.csv', index_col= 0)
 df['ethnicity_Hispanic'] = np.where(df['ethnicity'] == 'Hispanic or Latino', 1, 0)
 df['ethnicity_NotHispanic'] = np.where(df['ethnicity'] == 'Not Hispanic or Latino ', 1, 0)
 df['age_group'] = pd.cut(df['age'], bins=[0, 17, 44, 64, max(df['age'])], labels=['0-17', '18-44', '45-64', '65-'], right=False)

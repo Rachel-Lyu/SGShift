@@ -11,13 +11,13 @@ def downsample_DiabetesReadmission(X, y, n_samples, random_seed=42):
     )
     perm = np.random.RandomState(random_seed).permutation(len(y_downsampled))
     return X_downsampled[perm], y_downsampled[perm]
-source_df = pd.read_csv('/net/dali/home/mscbio/rul98/PheOpt/compare/whyshift/datasets/source_DiabetesReadmission.csv')
+source_df = pd.read_csv('../data/source_DiabetesReadmission.csv')
 feature_names = source_df.columns.to_list()[:-1]
 feature_names = np.array(feature_names)
 X_S = source_df[feature_names].values
 y_S = source_df['readmitted'].to_numpy().astype('int')
 
-target_df = pd.read_csv('/net/dali/home/mscbio/rul98/PheOpt/compare/whyshift/datasets/target_DiabetesReadmission.csv')
+target_df = pd.read_csv('../data/target_DiabetesReadmission.csv')
 target_X = target_df[feature_names].values
 target_y = target_df['readmitted'].to_numpy().astype('int')
 X_T, X_val, y_T, y_val = train_test_split(target_X, target_y, test_size=0.5, random_state=42)
